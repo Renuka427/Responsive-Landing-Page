@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="XYZ Consulting provides professional services in consulting, marketing, and SEO optimization. Tailored strategies for business success.">
+    <meta name="author" content="XYZ Consulting">
+    <meta name="robots" content="index, follow">
+    <title>Professional Webpage</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- Welcome Section -->
+    <section id="home" class="hero fade-in">
+        <div class="hero-content">
+            <h1>Welcome to Our Consultancy Services</h1>
+            <p>Your trusted partner for expert advice and solutions.</p>
+            <button id="get-started" aria-label="Get Started with our services">Get Started</button>
+        </div>
+    </section>
+
+    <!-- Navbar (Initially hidden) -->
+    <nav id="navbar" aria-label="Main navigation">
+        <ul>
+            <li><a href="#home" aria-label="Go to Home"><i class="fas fa-home"></i> 🏠 Home</a></li>
+            <li><a href="#about" aria-label="Go to About Us"><i class="fas fa-info-circle"></i> ℹ️ About Us</a></li>
+            <li><a href="#services" aria-label="Go to Our Services"><i class="fas fa-cogs"></i> 🛠️ Our Services</a></li>
+            <li><a href="#consultancy" aria-label="Go to Consultancy Appointment"><i class="fas fa-clipboard-list"></i> 📝 Consultancy Appointment</a></li>
+            <li><a href="#contact" aria-label="Go to Contact Us"><i class="fas fa-address-book"></i> 📞 Contact Us</a></li>
+            <li><a href="#rate-us" aria-label="Go to Rate Us"><i class="fas fa-star"></i> ⭐ Rate Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Us Section -->
+    <section id="about" class="section fade-in">
+        <div class="card glassmorphism">
+            <h2>About Us</h2>
+            <p>We provide high-quality professional services designed to help businesses succeed. Our team of experts is dedicated to providing tailored solutions that meet your needs.</p>
+            <ul>
+                <li><strong>Expert consultancy in various industries</strong></li>
+                <li><strong>Customized strategies and solutions</strong></li>
+                <li><strong>Proven track record of success</strong></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section fade-in">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-container">
+            <!-- Service Card 1 -->
+            <div class="service-card pop-up-detail">
+                <h3>Consulting</h3>
+                <p>Strategic advice to help you navigate complex business challenges.</p>
+            </div>
+
+            <!-- Service Card 2 -->
+            <div class="service-card pop-up-detail">
+                <h3>Marketing</h3>
+                <p>Comprehensive digital marketing services to boost your brand presence.</p>
+            </div>
+
+            <!-- Service Card 3 -->
+            <div class="service-card pop-up-detail">
+                <h3>SEO Optimization</h3>
+                <p>Improve your search rankings and drive more traffic to your website.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultancy Appointment Section -->
+    <section id="consultancy" class="section fade-in">
+        <h2>Consultancy Appointment</h2>
+        <form id="consultancy-form" aria-labelledby="consultancy">
+            <div class="form-group">
+                <label for="name">Your Name <span class="required">*</span>:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required aria-required="true">
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email <span class="required">*</span>:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required aria-required="true">
+            </div>
+            <div class="form-group">
+                <label for="phone">Your Phone Number <span class="required">*</span>:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required aria-required="true">
+            </div>
+            <div class="form-group">
+                <label for="preferred-date">Preferred Date for Consultation:</label>
+                <input type="date" id="preferred-date" name="preferred-date">
+            </div>
+            <div class="form-group">
+                <label for="preferred-time">Preferred Time for Consultation:</label>
+                <input type="time" id="preferred-time" name="preferred-time">
+            </div>
+            <div class="form-group">
+                <label for="service-type">Type of Service <span class="required">*</span>:</label>
+                <select id="service-type" name="service-type" required aria-required="true">
+                    <option value="" disabled selected>Select the type of service</option>
+                    <option value="consulting">Consulting</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="seo">SEO Optimization</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Your Message <span class="required">*</span>:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Describe your needs or queries in detail" required aria-required="true"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="terms">
+                    <input type="checkbox" id="terms" name="terms" required aria-required="true">
+                    I agree to the <a href="#">terms and conditions</a>
+                </label>
+            </div>
+            <button type="submit" id="submit-button" disabled>Submit</button>
+        </form>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="section fade-in">
+        <div class="card pop-up-detail">
+            <h2>Contact Us</h2>
+            <p><strong>Our Address:</strong> 123 Business Street, City, Country</p>
+            <p><strong>Company Name:</strong> XYZ Consulting</p>
+            <p><strong>Phone Number:</strong> +1 (123) 456-7890</p>
+            <p><strong>Email:</strong> contact@xyzconsulting.com</p>
+        </div>
+    </section>
+
+    <!-- Rate Us Section -->
+    <section id="rate-us" class="section fade-in">
+        <div class="content">
+            <h2>How would you rate your experience with us?</h2>
+            <div class="emoji-rating">
+                <span class="emoji" data-rating="1" aria-label="Very Bad Rating">😡</span>
+                <span class="emoji" data-rating="2" aria-label="Bad Rating">🙁</span>
+                <span class="emoji" data-rating="3" aria-label="Neutral Rating">😐</span>
+                <span class="emoji" data-rating="4" aria-label="Good Rating">🙂</span>
+                <span class="emoji" data-rating="5" aria-label="Very Good Rating">😊</span>
+                <span class="emoji" data-rating="6" aria-label="Excellent Rating">😍</span>
+            </div>
+            <div id="emoji-response" class="emoji-response" style="display: none;">
+                <p id="emoji-response-text"></p>
+            </div>
+            <!-- Feedback Thank You Card -->
+            <div id="thank-you-message" class="thank-you-card" style="display: none;">
+                <h3>Thank You for Your Feedback!</h3>
+                <p>We genuinely appreciate your input. It helps us enhance our services and serve you even better. Thank you for taking the time to help us grow!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" style="display:none;" aria-label="Back to top">Back to Top</button>
+
+    <!-- Place script at the end of the body for performance reasons -->
+    <script src="script.js" defer></script>
+</body>
+
+</html>
